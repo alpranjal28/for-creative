@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="relative w-full min-h-screen h-screen bg-[#2d3748]">
       <Header />
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         <div className="flex flex-col items-center justify-evenly w-full h-full">
           <h1 className="text-2xl text-white mt-8">
             Welcome to Formik 

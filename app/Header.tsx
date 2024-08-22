@@ -32,7 +32,7 @@ const Header = () => {
               </span>
             </p>
           ) : (
-            <div className="flex flex-col items-center justify-center">
+            <div className="hidden sm:flex flex-col items-center justify-center">
               <p>No active session</p>
               <p>Please sign in</p>
             </div>
@@ -47,7 +47,7 @@ const Header = () => {
                 alt="profile"
                 width={40}
                 height={40}
-                className="rounded-full"
+                className="block rounded-full sm:hidden"
               />
               <button
                 onClick={() => signOut()}
@@ -57,16 +57,16 @@ const Header = () => {
               </button>
             </div>
           ) : (
-            <div className="flex gap-4 items-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
               <button
                 onClick={() => signIn("google")}
-                className="bg-[#523db7] text-white !px-6 !py-2 rounded-lg"
+                className="bg-[#523db7] text-white !px-6 !md:py-2  rounded-lg"
               >
                 Google
               </button>
               <button
                 onClick={() => signIn("github")}
-                className="bg-[#523db7] text-white !px-6 !py-2 rounded-lg"
+                className="bg-[#523db7] text-white !px-6 !md:py-2  rounded-lg"
               >
                 Github
               </button>
